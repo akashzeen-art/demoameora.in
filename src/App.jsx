@@ -17,6 +17,9 @@ import Terms from './pages/Terms'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import RefundPolicy from './pages/RefundPolicy'
 import Cart from './pages/Cart'
+import AboutUs from './pages/AboutUs'
+import ContactUs from './pages/ContactUs'
+import Navbar from './components/Navbar'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -26,7 +29,7 @@ function ScrollToTop() {
 
 function Home() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-10">
       <Hero />
       <StatsSection />
       <ProductIntro />
@@ -47,6 +50,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
@@ -54,6 +58,8 @@ export default function App() {
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/refund" element={<RefundPolicy />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   )
