@@ -91,12 +91,12 @@ export default function Hero() {
         </div>
 
         {/* Mobile feature bar */}
-        <div className="bottom-[15%] left-0 absolute flex mt-8 p-4 w-full overflow-x-auto">
+        <div className="bottom-[15%] left-0 absolute flex mt-8 p-2 w-full overflow-x-auto">
           {features.map((f) => (
-            <div key={f.title} className="flex flex-col justify-between p-3 border-2 border-white w-auto h-[80%]">
-              <h1 className="mb-2 font-bold text-white text-xl text-center">{f.title}</h1>
+            <div key={f.title} className="flex flex-col justify-between p-2 border border-white w-auto">
+              <h1 className="mb-1 font-bold text-white text-xs text-center">{f.title}</h1>
               <div className="flex flex-col justify-between items-center">
-                <img src={f.img} alt={f.title} className="w-12 h-12 object-contain" />
+                <img src={f.img} alt={f.title} className="w-8 h-8 object-contain" />
               </div>
             </div>
           ))}
